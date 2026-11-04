@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
+import Perfil from "@/components/Perfil";
 import { brl } from "@/lib/format";
 
 export const dynamic = "force-dynamic";
@@ -18,6 +19,10 @@ export default function Home() {
   ];
   return (
     <div className="space-y-6">
+      <div className="card flex items-center justify-between">
+        <Perfil grande />
+        <p className="hidden max-w-sm text-right text-sm text-muted md:block">Gestão estratégica da carteira: cadastro, fiscal, contábil e indicadores em um só lugar.</p>
+      </div>
       <h1 className="text-2xl font-bold">Painel</h1>
       <div className="grid grid-cols-2 gap-4 xl:grid-cols-4">
         {cards.map(([l, v]) => (

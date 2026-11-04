@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
+import Perfil from "@/components/Perfil";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -16,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR" className={geist.variable}>
       <body className="flex min-h-screen font-sans antialiased">
-        <aside className="w-56 shrink-0 border-r border-line p-5">
+        <aside className="flex w-56 shrink-0 flex-col border-r border-line p-5">
           <div className="mb-8 text-lg font-bold text-teal">ATX Contábil</div>
           <nav className="flex flex-col gap-1">
             {nav.map((n) => (
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Link>
             ))}
           </nav>
+          <div className="mt-auto border-t border-line pt-4"><Perfil /></div>
         </aside>
         <main className="flex-1 p-8">{children}</main>
       </body>

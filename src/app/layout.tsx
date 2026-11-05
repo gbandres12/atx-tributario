@@ -11,6 +11,7 @@ const nav = [
   { href: "/", label: "Painel" },
   { href: "/clients", label: "Clientes" },
   { href: "/cfop", label: "Consulta CFOP" },
+  { href: "/nexum-fiscal", label: "Nexum Fiscal" },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
